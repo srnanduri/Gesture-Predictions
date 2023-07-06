@@ -1,0 +1,70 @@
+ 
+<html>
+  <head>
+    <title>Gesture To Emoji</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+      <h3 class = "btn btn-primary heading">GESTURE TO EMOJI APP
+        <br>
+        <span>&#9994;</span>
+        <span>&#9757;</span>
+        <span>&#9996;</span>
+        <span>&#128077;</span>
+        <span>&#128076;</span>
+      </h3>
+      <br><br>
+      <p style="font-size: 22px;">Take a picture of your hand doing a gesture and I'll predict what gesture it is.
+      	<br>
+        <b style="color: rgb(99, 0, 96)">Victoriously make a peace sign</b>
+        <br>
+        <b style="color: rgb(0, 0, 144)">Make a thumbs up</b>
+        <br>
+        <b style="color: rgb(0, 89, 111)">Make another wonderful gesture</b>
+        <br>
+      </p>
+    
+      
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Snapshot: </label>
+        <div id = "camera"></div>
+        <br><br>
+        <button onclick = "take_snapshot();" class = "btn btn-primary"> Capture Image</button>
+        <br><br><br>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Prediction 1:</label>
+        <p class = "gesture_name" id = "result_gesture_name"></p>
+        <p class = "emoji" id = "update_emoji"></p>
+        <label>Prediction 2:</label>
+        <p class = "gesture_name" id = "result_gesture_name2"></p>
+        <p class = "emoji" id = "update_emoji2"></p>
+      </div>
+      <div class = "col-md-4 col-sm-12 col-xs-12">
+        <label>Output:</label>
+        <div id = "resultEmotionNameTo"></div>
+        <br><br>
+        <button id = "PredictEmoji" class = "btn" onclick = "check();">Predict Gesture/Emoji</button>
+      </div>
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
